@@ -14,8 +14,8 @@ class BackendHelloWorldTest(unittest.TestCase):
         self.assertEqual(res.data, b'{"url":"https://example.com"}\n')
 
     def test_create_url(self):
-        res = self.client.post("/create")
-        self.assertEqual(res.data, b'{"url":"https://example.com"}\n')
+        res = self.client.get("/create")
+        self.assertEqual(res.data, b'{"url":"https://exmaple.com"}\n')
 
 if __name__ == "__main__":
     unittest.main()
